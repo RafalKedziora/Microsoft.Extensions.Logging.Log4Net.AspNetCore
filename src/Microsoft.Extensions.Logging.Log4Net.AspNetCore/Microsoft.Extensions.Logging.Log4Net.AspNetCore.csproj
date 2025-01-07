@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>netcoreapp3.1;netstandard2.0;netstandard2.1;net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
+		<TargetFrameworks>netcoreapp3.1;netstandard2.0;net8.0</TargetFrameworks>
 	</PropertyGroup>
 	<PropertyGroup>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<!--<GeneratePackageOnBuild>True</GeneratePackageOnBuild>-->
 		<PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
 		<PackageId>Microsoft.Extensions.Logging.Log4Net.AspNetCore</PackageId>
 		<Authors>Huor Swords</Authors>
@@ -21,24 +21,24 @@
 		<PackageReleaseNotes>
 			#133 - Compatible with .NET 8.0
 		</PackageReleaseNotes>
-		<PackageProjectUrl>https://github.com/huorswords/Microsoft.Extensions.Logging.Log4Net.AspNetCore</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/huorswords/Microsoft.Extensions.Logging.Log4Net.AspNetCore</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/RafalKedziora/Microsoft.Extensions.Logging.Log4Net.AspNetCore</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/RafalKedziora/Microsoft.Extensions.Logging.Log4Net.AspNetCore</RepositoryUrl>
 		<Version>8.0.0</Version>
 		<AssemblyVersion>8.0.0.0</AssemblyVersion>
 		<FileVersion>8.0.0.0</FileVersion>
-		<SignAssembly>true</SignAssembly>
-		<AssemblyOriginatorKeyFile Condition="'$(Configuration)' == 'Release'">Microsoft.Extensions.Logging.Log4Net.AspNetCoreKey.snk</AssemblyOriginatorKeyFile>
+		<!--<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile Condition="'$(Configuration)' == 'Release'">Microsoft.Extensions.Logging.Log4Net.AspNetCoreKey.snk</AssemblyOriginatorKeyFile>-->
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
-	<PropertyGroup>
+	<!--<PropertyGroup>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	</PropertyGroup>
+	</PropertyGroup>-->
 	<ItemGroup>
 		<PackageReference Include="Microsoft.SourceLink.AzureRepos.Git" Version="8.0.0" PrivateAssets="All" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
-		<PackageReference Include="log4net" Version="2.0.15" />
+		<PackageReference Include="log4net" Version="3.0.3" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
@@ -46,35 +46,11 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.2.4" />
 	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.0.0" />
-	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.18" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.18" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.18" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.18" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
-	</ItemGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.4" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
