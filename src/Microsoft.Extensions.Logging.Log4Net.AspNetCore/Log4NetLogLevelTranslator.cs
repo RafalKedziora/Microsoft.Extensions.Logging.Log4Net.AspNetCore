@@ -19,18 +19,23 @@ namespace Microsoft.Extensions.Logging
                                 ? Level.Critical
                                 : Level.Fatal;
                     break;
+
                 case LogLevel.Debug:
                     log4NetLevel = Level.Debug;
                     break;
+
                 case LogLevel.Error:
                     log4NetLevel = Level.Error;
                     break;
+
                 case LogLevel.Information:
                     log4NetLevel = Level.Info;
                     break;
+
                 case LogLevel.Warning:
                     log4NetLevel = Level.Warn;
                     break;
+
                 case LogLevel.Trace:
                     log4NetLevel = Level.Trace;
                     break;

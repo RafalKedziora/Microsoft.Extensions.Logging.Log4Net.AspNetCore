@@ -20,7 +20,7 @@ namespace Unit.Tests
 
         private AppenderFixture Context { get; }
 
-// .NET Framework does not use generic host builder like this so we can only test it for our .NET Core targets
+        // .NET Framework does not use generic host builder like this so we can only test it for our .NET Core targets
 #if NETCOREAPP3_1_OR_GREATER
 
         [Fact]

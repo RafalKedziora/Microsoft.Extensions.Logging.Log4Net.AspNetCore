@@ -49,7 +49,6 @@ namespace Microsoft.Extensions.Logging
             return loggingEvent;
         }
 
-
         /// <summary>
         /// Gets the scopes from the external scope provider and converts them to the properties on the logging event.
         /// This function will honor the convention that logging scopes can provide their own property name, by implementing
@@ -157,10 +156,9 @@ namespace Microsoft.Extensions.Logging
                     }
                     return false;
                 }
-
             }, loggingEvent);
         }
-        
+
         private static string JoinOldAndNewValue(string previousValue, string newValue)
         {
             if (string.IsNullOrEmpty(previousValue))

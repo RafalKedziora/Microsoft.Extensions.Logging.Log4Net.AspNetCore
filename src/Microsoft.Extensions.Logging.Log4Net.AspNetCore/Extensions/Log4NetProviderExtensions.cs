@@ -1,6 +1,4 @@
-﻿using log4net;
-using System;
-using System.Reflection;
+﻿using System;
 
 namespace Microsoft.Extensions.Logging.Extensions
 {

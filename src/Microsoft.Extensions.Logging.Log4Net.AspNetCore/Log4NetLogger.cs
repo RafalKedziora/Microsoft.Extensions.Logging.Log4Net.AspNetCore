@@ -45,7 +45,6 @@ namespace Microsoft.Extensions.Logging
         /// </summary>
         internal Log4NetProviderOptions Options => this.options;
 
-
         /// <summary>
         /// Begins a logical operation scope.
         /// </summary>

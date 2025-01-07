@@ -2,8 +2,6 @@
 using log4net.Appender;
 using log4net.Core;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Log4Net.AspNetCore.Entities;
-using Microsoft.Extensions.Logging.Log4Net.AspNetCore.Scope;
 using Moq;
 using Moq.Protected;
 using System;
@@ -342,7 +340,6 @@ namespace Unit.Tests
                         .Be(expectedCustomPropertyValue);
         }
 
-
         [Fact]
         public void Log_Should_Emit_At_LogLevels_Translate_By_LogLevelTranslator()
         {
@@ -363,7 +360,6 @@ namespace Unit.Tests
                     f => f.TranslateLogLevel(LogLevel.Error, options)
                 )
                 .Returns(expectedErrorLevel);
-
 
             options.LogLevelTranslator = mockedTranslator.Object;
             var testAppender = GetTestAppender(options);

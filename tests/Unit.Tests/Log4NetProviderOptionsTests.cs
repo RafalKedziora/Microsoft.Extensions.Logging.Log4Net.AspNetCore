@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Log4Net.AspNetCore;
 using Moq;
 using Xunit;
 

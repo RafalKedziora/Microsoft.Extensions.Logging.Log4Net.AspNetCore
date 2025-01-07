@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Log4Net.AspNetCore.Scope;
 using System.Reflection;
 using Unit.Tests.Fixtures;
 using Xunit;
